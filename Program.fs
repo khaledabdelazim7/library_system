@@ -74,7 +74,7 @@ module Backend =
             "Book deleted permanently."
         )
 
-    // === وظيفة تعديل البيانات الجديدة ===
+    
     let updateBookDetails (id: int) (title: string) (author: string) (isbn: string) =
         using (new SQLiteConnection(connectionString)) (fun conn ->
             conn.Open()
@@ -86,7 +86,7 @@ module Backend =
             | _ -> "Error: Check if ISBN already exists for another book."
         )
 
-    let borrowBook (id: int) =
+    let borrowBook (id: int) = 
         using (new SQLiteConnection(connectionString)) (fun conn ->
             conn.Open()
             let sql = "UPDATE Books SET AvailableCopies = AvailableCopies - 1 WHERE Id = @Id AND AvailableCopies > 0"
