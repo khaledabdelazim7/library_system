@@ -8,7 +8,7 @@ open System.Windows.Forms
 open System.Drawing
 
 // ==========================================
-// 1. DOMAIN MODEL
+// 1. DOMAIN MODE
 // ==========================================
 [<CLIMutable>]
 type Book = {
